@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 500 500" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-1297.45,-440.797)">
+        <g transform="matrix(9.09559,0,0,9.09559,-3291.11,-6484.52)">
+            <g transform="matrix(0.0920298,0,0,0.0920298,446.422,741.547)">
+                <rect x="630.879" y="215.638" width="597.325" height="597.325"/>
+            </g>
+            <g transform="matrix(0.777693,0,0,0.62019,-21.5225,431.432)">
+                <g transform="matrix(62.2909,0,0,62.2909,736.256,613.261)">
+                </g>
+                <text x="715.635px" y="613.261px" style="font-family:'Impact', sans-serif;font-stretch:condensed;font-size:62.291px;fill:rgb(219,127,61);">J</text>
+            </g>
+            <g transform="matrix(0.604437,0,0,0.561669,80.5158,452.051)">
+                <g transform="matrix(68.7811,0,0,68.7811,741.797,613.261)">
+                </g>
+                <text x="715.635px" y="613.261px" style="font-family:'Impact', sans-serif;font-stretch:condensed;font-size:68.781px;fill:rgb(219,127,61);">L</text>
+            </g>
+        </g>
+    </g>
+</svg>
