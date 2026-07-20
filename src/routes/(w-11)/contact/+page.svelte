@@ -53,7 +53,7 @@
 				</label>
 			</fieldset>
 			<footer class="flex justify-end">
-				<button type="submit" class="btn btn-xl text-slate-200 preset-filled-surface-600-400 border-black rounded-none border-2 shadow-[8px_8px_0px_2px_rgba(0,_0,_0,_1)]">Envoyer</button>
+				<button type="submit" class="btn btn-xl text-slate-200 preset-filled-surface-500 border-black rounded-none border-2 shadow-[8px_8px_0px_2px_rgba(0,_0,_0,_1)] transform transition duration-300 hover:cursor-pointer hover:scale-98 hover:shadow-[2px_2px_0px_1px_rgba(0,_0,_0,_1)]">Envoyer</button>
 			</footer>
 		</form>
 	</section>
