@@ -35,7 +35,7 @@ export const load: PageServerLoad = async ({ params }) => {
 	const mentoring: Array<{title: string, content: string}> = [
 		{
 			title: 'Aide ponctuelle',
-			content: `Bloqué.e sur un problème d'implémentation, sur la compréhension d'un concept ou sur un bug un peu trop résistant, vous pensez qu'un regard extérieur pourrait vous faire avancer plus efficacement ? Je serais ravi de servir de <a target="_blank" class="anchor" href="https://fr.wikipedia.org/wiki/M%C3%A9thode_du_canard_en_plastique">canard en plastique</a> pour 60 minutes.`
+			content: `Bloqué.e sur un problème d'implémentation, sur la compréhension d'un concept ou sur un bug un peu trop résistant, vous pensez qu'un regard extérieur pourrait vous faire avancer plus efficacement ? Je serais ravi de servir de <a target="_blank" class="anchor text-secondary-500" href="https://fr.wikipedia.org/wiki/M%C3%A9thode_du_canard_en_plastique">canard en plastique</a> pour 60 minutes.`
 		},
 		{
 			title: 'Accompagnement',

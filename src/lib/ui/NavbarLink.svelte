@@ -14,6 +14,6 @@
 </script>
 
 
-<a {href} {target} class={["text-slate-200 hover:text-brand-light transition-all duration-300", textSize, isCurrentPage(href, currentUri) ? 'text-brand-light' : '']}>
+<a {href} {target} class={["hover:text-secondary-500 transition-all duration-300", textSize, isCurrentPage(href, currentUri) ? 'text-secondary-500' : '']}>
   	{@render children?.()}
 </a>

@@ -9,4 +9,10 @@
 html,
 body {
   @apply h-full;
+  @apply bg-surface-50;
+  @apply text-black;
+}
+
+.neobrutalism-shadow {
+  @apply shadow-[2px_2px_0px_1px_rgba(0, _0, _0, _1)];
 }

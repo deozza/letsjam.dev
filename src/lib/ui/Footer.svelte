@@ -15,7 +15,7 @@
   
 </script>
 
-<footer class="grid grid-cols-3 gap-2 bg-surface-800 p-6">
+<footer class="grid grid-cols-3 gap-2 bg-surface-50 p-6 border-t-2">
 	<div class="flex flex-col items-start justify-end space-y-2">
 		{#each links as link}
 			<NavbarLink href={link.href} currentUri="" target={link.target} textSize="text-base">{link.content}</NavbarLink>
@@ -29,6 +29,6 @@
 		<NavbarLink target="_blank" href="/legals" currentUri="" textSize="text-base">Mentions légales</NavbarLink>
 	</div>
 	<div class="flex flex-col items-start justify-end space-y-2">
-		<p class="text-end">Site réalisé par <a class="anchor" target="_parent"  href="/">©Letsjam</a>. Reprenez le contrôle de votre code.</p>
+		<p class="text-end">Site réalisé par <a class="anchor text-secondary-500" target="_parent" href="/">©Letsjam</a>. Reprenez le contrôle de votre code.</p>
 	</div>
 </footer>

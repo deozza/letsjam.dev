@@ -17,7 +17,7 @@
   
 </script>
 
-<AppBar class="hidden md:block bg-surface-800">
+<AppBar class="hidden md:block bg-surface-50 border-b-2">
 	<AppBar.Toolbar class="grid-cols-[1fr_4fr_1fr]">
 		<AppBar.Headline>
 		</AppBar.Headline>

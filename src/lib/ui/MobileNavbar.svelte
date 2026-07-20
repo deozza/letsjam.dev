@@ -15,12 +15,12 @@
 	let { currentUri, links }: Props = $props();
 </script>
 
-<Navigation layout="bar" class="md:hidden sticky bottom-0 right-0 bg-surface-800">
+<Navigation layout="bar" class="md:hidden sticky bottom-0 right-0 bg-surface-50 border-t-2">
 	<Navigation.Menu class="grid grid-cols-5 gap-2">
 		{#each links as link}
 			{#if link.img === undefined}
 				<Navigation.TriggerAnchor href={link.href}>
-					<Navigation.TriggerText class={[isCurrentPage(link.href, currentUri) ? 'text-brand-light' : 'text-slate-200']}>{link.content}</Navigation.TriggerText>
+					<Navigation.TriggerText class={[isCurrentPage(link.href, currentUri) ? 'text-secondary-500' : 'text-dark']}>{link.content}</Navigation.TriggerText>
 				</Navigation.TriggerAnchor>
 			{:else}
 				<Navigation.TriggerAnchor href={link.href}>
