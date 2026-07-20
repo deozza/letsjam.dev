@@ -16,7 +16,7 @@ export const load: PageServerLoad = async ({ params }) => {
 		},
 		{
 			title: 'Introduction aux bases de données relationnelles',
-			content: 'Stocker intelligemment ses données sur un serveur afin de les réutiliser depuis une application avec MySQL.'
+			content: 'Stocker intelligemment ses données sur un serveur MySQL afin de les réutiliser depuis une application cliente.'
 		},
 		{
 			title: 'Modélisation des systèmes',
