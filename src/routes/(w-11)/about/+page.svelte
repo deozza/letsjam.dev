@@ -52,7 +52,7 @@
 	<p class="h1 text-center text-black">Vous voulez travailler avec moi ?</p>
 	<p></p>
 	<div class="flex flex-col md:flex-row flex-wrap items-center justify-center space-y-2 md:space-y-0 md:space-x-6 ">
-			<a href="/services" class="btn md:btn-xl preset-filled-surface-400-600 shadow-[2px_2px_0px_1px_rgba(0,_0,_0,_0.5)]">Ce que je vous propose</a>
-			<a href="/contact" class="btn md:btn-xl preset-filled-surface-900-100 shadow-[2px_2px_0px_1px_rgba(0,_0,_0,_0.5)]">Prendre contact</a>
+			<a href="/services" class="btn md:btn-xl preset-filled-surface-600-400 text-slate-200 shadow-[2px_2px_0px_1px_rgba(0,_0,_0,_0.5)]">Ce que je vous propose</a>
+			<a href="/contact" class="btn md:btn-xl preset-filled-surface-900-100 text-black shadow-[2px_2px_0px_1px_rgba(0,_0,_0,_0.5)]">Prendre contact</a>
 	</div>
 </section>

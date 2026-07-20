@@ -37,7 +37,7 @@
 			</div>
 		</AppBar.Lead>
 		<AppBar.Trail class="h-full flex justify-end items-end">
-			<NavbarLink target="_blank" href="https://www.github/deozza" currentUri={currentUri}><Icon icon="mdi:linkedin" class="size-elem-3xl" /></NavbarLink>
+			<NavbarLink target="_blank" href="https://www.linkedin.com/in/edenn-touitou-15ba17153/" currentUri={currentUri}><Icon icon="mdi:linkedin" class="size-elem-3xl" /></NavbarLink>
 			<NavbarLink target="_blank" href="https://www.github.com/deozza" currentUri={currentUri}><Icon icon="mdi:github" class="size-elem-3xl" /></NavbarLink>
 		</AppBar.Trail>
 	</AppBar.Toolbar>
