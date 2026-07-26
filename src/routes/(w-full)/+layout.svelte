@@ -9,10 +9,10 @@
 </script>
 
 <DesktopNavbar links={data.links} currentUri={data.currentUri} />
+<MobileNavbar links={data.links} currentUri={data.currentUri} />
 
 <main class="flex flex-col items-center justiy-between">
 	{@render children()}
 </main>
 
 <Footer links={data.links} />
-<MobileNavbar links={data.links} currentUri={data.currentUri} />

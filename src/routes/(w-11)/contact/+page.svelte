@@ -21,7 +21,7 @@
 
 <div class="flex flex-col-reverse md:flex-row flex-wrap items-start justify-between">
 	
-	<section class="w-full md:w-5/12">
+	<section class="w-full md:w-5/12 my-12 md:my-0">
 		<form class="card rounded-none bg-primary-500 p-4 space-y-6 border-black rounded-none border-2 shadow-[8px_8px_0px_2px_rgba(0,_0,_0,_1)]"
 			{...sendContact.enhance(async (form) => {
 				try {
@@ -101,7 +101,7 @@
 		</form>
 	</section>
 
-	<section class="h-full w-full md:w-1/2 grid grid-flow-row auto-rows-max gap-6">
+	<section class="w-full md:w-1/2 grid grid-flow-row auto-rows-max gap-6">
 		<div class="card preset-outlined-surface-500 border-black rounded-none border-2 shadow-[8px_8px_0px_2px_rgba(0,_0,_0,_1)] w-full p-6">
 			<h2 class="h4 pb-4 text-secondary-500">[01] Envoi d'un message</h2>
 			<p class="text-justify">Vous avez un projet sur lequel vous aimeriez que j'intervienne, des questions sur un cours ou vous voulez simplement discuter ? Remplissez rapidement le formulaire pour prendre contact.</p>

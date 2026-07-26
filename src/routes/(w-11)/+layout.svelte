@@ -9,6 +9,7 @@
 </script>
 
 <DesktopNavbar links={data.links} currentUri={data.currentUri} />
+<MobileNavbar links={data.links} currentUri={data.currentUri} />
 
 <main class="flex flex-col items-center justify-between my-6">
 	<div class="w-11/12 flex flex-col items-start justify-between space-y-6">
@@ -17,4 +18,3 @@
 </main>
 
 <Footer links={data.links} />
-<MobileNavbar links={data.links} currentUri={data.currentUri} />
