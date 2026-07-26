@@ -1,12 +1,11 @@
 import website from "$lib/server/config/website";
-// import { getOptimizedImageLink } from "$lib/utils";
 import type { Breadcrumb, EntityMeta, FeaturedImage, OgImage, Seo } from "$lib/server/config/SEO/types";
 
-export default abstract class AbstractSeoForPage<DataT, RouteParamsT> {
+export default abstract class AbstractSeoForPage {
   
-  public abstract getSeoProps(data: DataT, params: RouteParamsT): Seo;
-  protected abstract getBreadcrumbs(data: DataT, params: RouteParamsT): Array<Breadcrumb>;
-  protected abstract getTitle(data: DataT, params: RouteParamsT): string;
+  public abstract getSeoProps(): Seo;
+  protected abstract getBreadcrumbs(): Array<Breadcrumb>;
+  protected abstract getTitle(): string;
   
   protected getFeaturedImage(link: string | null, title: string, alt: string): FeaturedImage {
     let rawImageLink: string = '';
