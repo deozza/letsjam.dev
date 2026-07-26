@@ -11,7 +11,7 @@
 <DesktopNavbar links={data.links} currentUri={data.currentUri} />
 
 <main class="flex flex-col items-center justify-between my-6">
-	<div class="w-11/12">
+	<div class="w-11/12 flex flex-col items-start justify-between space-y-6">
 		{@render children()}
 	</div>
 </main>
