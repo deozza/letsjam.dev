@@ -43,10 +43,17 @@ export const load: PageServerLoad = async ({ params }) => {
 		},
 	];
 
+	const courseSubtexts: Array<string> = [
+		`Au fil de mes années de pratique, j'ai pu mettre au point plusieurs syllabus permettant de se former au métier du développement web fullstack. Ces cours ont été construits pour s'adresser à des élèves de tous niveaux, de la première année de bachelor à la deuxième année de mastère, et sont adaptables en fonction de vos besoins et de vos programmes. Ils sont clefs en main : savoirs et compétences prérequis, objectifs pédagogiques, détails séance par séance, exercices d'entrainement, contrôles continus, partiels, ...`,
+		`Pour favoriser une pratique continue ainsi qu'une montée rapide en compétences, je me base sur une pédagogie qui allie études de cas, mises en situation réelle. La théorie et les bases techniques occupent une place importante dans mes interventions, mais elle accompagne toujours du factuel.`,
+		`Mes interventions sont pensées comme des conférences intéractives. Ce ne sont pas seulement des enchaînements de savoirs théoriques et d'applications techniques, mais, avant tout, des échanges afin de stimuler l'intérêt des élèves pour le métier, les encourager à mettre en place une veille technologique et à affuter leur esprit critique.`,
+	];
+
 	
 	return {
 		seoProps: coursesAndMentoringPageSeo.getSeoProps({}, params),
 		courses,
+		courseSubtexts,
 		mentoring
 	};
 };
