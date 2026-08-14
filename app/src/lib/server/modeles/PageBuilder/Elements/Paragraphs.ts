@@ -2,6 +2,7 @@ import * as z from 'zod';
 import { alignements } from '../Configs/Alignements';
 import { textSizes } from '../Configs/TextSizes';
 import { fontWeights } from '../Configs/FontWeights';
+import { styles } from '../Configs/Styles';
 
 export const paragraphs = z.object({
   status: z.enum(['draft', 'published', 'archived']),
@@ -10,7 +11,8 @@ export const paragraphs = z.object({
   content: z.string(),
   alignement: alignements,
   size: textSizes,
-  fontWeight: fontWeights
+  fontWeight: fontWeights,
+  style: styles
 })
 
 export type Paragraphs = z.infer<typeof paragraphs>;

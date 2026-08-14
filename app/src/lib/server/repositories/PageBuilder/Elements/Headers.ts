@@ -1,1 +1,1 @@
-export const headerFields = ['content', 'size', 'importance'];
+export const headerFields = ['content', 'size', 'importance', 'alignement', 'style'];

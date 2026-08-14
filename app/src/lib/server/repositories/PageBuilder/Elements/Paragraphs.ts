@@ -1,1 +1,1 @@
-export const paragraphFields = ['content', 'size', 'alignement', 'fontWeight'];
+export const paragraphFields = ['content', 'size', 'alignement', 'fontWeight', 'style'];
