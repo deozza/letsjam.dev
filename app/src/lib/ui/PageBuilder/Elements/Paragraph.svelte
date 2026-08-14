@@ -10,6 +10,15 @@
 
 </script>
 
-<p class={[`text-${element.alignement}`, selfAlignmentMapping.get(element.alignement) || '', element.size, `font-${element.fontWeight}`]}>
+<p class={[`text-${element.alignement}`, `self-${selfAlignmentMapping.get(element.alignement)}` || '', element.size, `font-${element.fontWeight}`, `text-${element.style}`]}>
   {element.content}
 </p>
+
+<style lang='postcss' scoped>
+	@reference "tailwindcss";
+	@reference "../../../../routes/layout.css";
+
+	p.text-primary {
+		@apply text-primary-500;
+	}
+</style>

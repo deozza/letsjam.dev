@@ -11,9 +11,11 @@
 	let { element }: Props = $props();
 </script>
 
-<div class={['flex flex-col items-center justify-center card p-6 my-6 space-y-6', `bg-${element.style}`, `md:w-${element.width}`, selfAlignmentMapping.get(element.alignement)]}>
+<div class={[`card flex flex-col items-center  space-y-6 bg-${element.style} border-black rounded-none border-2 shadow-[8px_8px_0px_2px_rgba(0,_0,_0,_1)] p-6 w-full md:w-${element.width}`, `self-${selfAlignmentMapping.get(element.alignement)}` || '', `justify-${selfAlignmentMapping.get(element.alignement)}` || '']}>
 	{#if element.title !== undefined && element.title !== null}
-		<Paragraph element={element.title} />
+		<div class="pb-4">
+			<Paragraph element={element.title} />
+		</div>
 	{/if}
 	{#if element.content !== undefined && element.content !== null}
 		<Paragraph element={element.content} />
@@ -28,7 +30,7 @@
 	@reference "../../../../routes/layout.css";
 
 	div.card.bg-primary{
-		@apply preset-filled-primary-500 border-black rounded-none border-2 shadow-[8px_8px_0px_2px_rgba(0,_0,_0,_1)];
+		@apply preset-filled-primary-500 ;
 	}
 
 	div.card.bg-primary, .bg-tertiary > p {
@@ -39,10 +41,10 @@
 	}
 	
 	div.card.bg-secondary{
-		@apply preset-outlined-surface-500 border-black rounded-none border-2 shadow-[8px_8px_0px_2px_rgba(0,_0,_0,_1)];
+		@apply preset-filled-surface-500;
 	}
 	
 	div.card.bg-tertiary{
-		@apply preset-outlined-surface-500 border-black rounded-none border-2 shadow-[8px_8px_0px_2px_rgba(0,_0,_0,_1)];
+		@apply preset-outlined-surface-500;
 	}
 </style>

@@ -15,7 +15,8 @@
 	const componentMapping: Map<string, SvelteComponent> = new Map([
 	  ['richTexts', RichText],
 	  ['headers', Header],
-	  ['cards', Card]
+	  ['cards', Card],
+	  ['grids', Grid],
 	]);
 
 
