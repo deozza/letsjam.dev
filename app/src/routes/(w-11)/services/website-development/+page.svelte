@@ -5,6 +5,7 @@
 	import { Accordion } from '@skeletonlabs/skeleton-svelte';
 	import { slide } from 'svelte/transition';
 	import Icon from "@iconify/svelte";
+	import Section from '$lib/ui/PageBuilder/Blocks/Section.svelte';
 	
 	interface Props {
 		data: PageServerData;
@@ -18,25 +19,11 @@
 
 <Breadcrumbs breadcrumbs={data.seoProps.breadcrumbs} />
 
-<h1 class="h1 font-black my-12">{data.seoProps.pageTitle}</h1>
+{#each data.page.sections as section}
+	<Section {section} />
+{/each}
 
 <section class="w-full flex flex-col items-start justify-start space-y-12">
-	<h2 class="h2">Deux formules au choix :</h2>
-	
-	<div class="grid md:grid-cols-2 gap-6 w-full">
-		<div class="card preset-filled-surface-500 rounded-none border-black border-2 shadow-[8px_8px_0px_2px_rgba(0,_0,_0,_1)] p-6">
-			<h3 class="h4 pb-4 text-primary-500 text-center">Vous n'avez pas encore de site</h3>
-			<p class="text-justify">Vous souhaitez vous faire connaître de plus de personnes ? Ou vous voulez permettre à vos clients habituels de vous retrouver plus facilement ? Avoir un site vitrine sera votre carte de visite sur internet.</p>
-		</div>
-		<div class="card preset-filled-surface-500 rounded-none border-black border-2 shadow-[8px_8px_0px_2px_rgba(0,_0,_0,_1)] p-6">
-			<h3 class="h4 pb-4 text-primary-500 text-center">Reprise d'un site existant</h3>
-			<p class="text-justify">Vous êtes déjà propriétaire d'un site créé à partir d'un outil tierce (wordpress, sitew, wix, squarespace, ...) et vous souhaitez passer à un site fait main pour répondre exactement à vos besoins et vos exigences. Toutes les pages, interfaces et fonctionnalités seront répliquées. Vous ne repartirez pas de zéro.</p>
-		</div>
-	</div>
-</section>
-
-<section class="w-full flex flex-col items-start justify-start space-y-12">
-	<h2 class="h2">Comment je travaille :</h2>
 
 	<div class="flex flex-col items-start jutify-center w-full space-y-6">
 		<div class="flex flex-col md:flex-row flex-wrap items-start md:items-center justify-start space-x-6">
@@ -142,13 +129,3 @@
 	</Accordion>
 
 </section>
-
-<section class="flex flex-col items-center justify-center card preset-filled-primary-500 w-full p-6 my-6 space-y-6 border-black rounded-none border-2 shadow-[8px_8px_0px_2px_rgba(0,_0,_0,_1)]">
-	<p class="h1 text-center text-black">Vous voulez travailler avec moi ?</p>
-	<p></p>
-	<div class="flex flex-col md:flex-row flex-wrap items-center justify-center space-y-4 md:space-y-0 md:space-x-6 ">
-			<a href="/contact?object=website-from-scratch" class="btn md:btn-xl preset-filled-surface-500 text-slate-200 border-black rounded-none border-2 shadow-[8px_8px_0px_2px_rgba(0,_0,_0,_1)] transform transition duration-300 hover:scale-98 hover:shadow-[2px_2px_0px_1px_rgba(0,_0,_0,_1)]">Demander un devis</a>
-			<a href="/contact?object=website-audit" class="btn md:btn-xl preset-filled-surface-950-50 border-black rounded-none border-2 shadow-[8px_8px_0px_2px_rgba(0,_0,_0,_1)] transform transition duration-300 hover:scale-98 hover:shadow-[2px_2px_0px_1px_rgba(0,_0,_0,_1)]">Commencer avec un audit</a>
-	</div>
-</section>
-
