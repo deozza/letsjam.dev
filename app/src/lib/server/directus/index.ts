@@ -16,6 +16,8 @@ import { styles } from '$lib/server/modeles/PageBuilder/Configs/Styles';
 import { textImportances } from '$lib/server/modeles/PageBuilder/Configs/TextImportances';
 import { textSizes } from '$lib/server/modeles/PageBuilder/Configs/TextSizes';
 import { containerWidths } from '../modeles/PageBuilder/Configs/ContainerWidths';
+import { accordions } from '../modeles/PageBuilder/Blocks/Accordions';
+import { lists } from '../modeles/PageBuilder/Blocks/Lists';
 
 export const schema = z.object({
   pages: z.array(pages),
@@ -34,6 +36,8 @@ export const schema = z.object({
   styles: z.array(styles),
   textImportances: z.array(textImportances),
   textSizes: z.array(textSizes),
+  accordions: z.array(accordions),
+  lists: z.array(lists)
 });
 
 export type Schema = z.infer<typeof schema>;

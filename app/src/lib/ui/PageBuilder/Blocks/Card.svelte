@@ -2,6 +2,7 @@
 	import type { Cards } from "$lib/server/modeles/PageBuilder/Blocks/Cards";
 	import { selfAlignmentMapping } from "$lib/utils";
 	import Paragraph from "../Elements/Paragraph.svelte";
+	import RichText from "../Elements/RichText.svelte";
 	import Grid from "./Grid.svelte";
 
 	interface Props {
@@ -13,12 +14,12 @@
 
 <div class={[`card flex flex-col items-center  space-y-6 bg-${element.style} border-black rounded-none border-2 shadow-[8px_8px_0px_2px_rgba(0,_0,_0,_1)] p-6 w-full md:w-${element.width}`, `self-${selfAlignmentMapping.get(element.alignement)}` || '', `justify-${selfAlignmentMapping.get(element.alignement)}` || '']}>
 	{#if element.title !== undefined && element.title !== null}
-		<div class="pb-4">
+		<div class="w-full pb-4">
 			<Paragraph element={element.title} />
 		</div>
 	{/if}
 	{#if element.content !== undefined && element.content !== null}
-		<Paragraph element={element.content} />
+		<RichText element={element.content} />
 	{/if}
 	{#if element.footer !== undefined && element.footer !== null}
 		<Grid element={element.footer} />

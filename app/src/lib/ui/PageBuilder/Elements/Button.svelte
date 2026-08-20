@@ -20,7 +20,7 @@
 	}
 
 	a.btn-base.primary{
-		@apply bg-brand-light;
+		@apply bg-brand-light text-black;
 	}
 	
 	a.btn-base.secondary{

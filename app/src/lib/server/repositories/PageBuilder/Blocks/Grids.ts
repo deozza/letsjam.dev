@@ -1,5 +1,6 @@
 import { buttonFields } from "../Elements/Buttons";
 import { paragraphFields } from "../Elements/Paragraphs";
+import { richTextFields } from "../Elements/RichTexts";
 
 export const gridFields = [
 	'*',{
@@ -10,7 +11,7 @@ export const gridFields = [
 					cards: [
 						'*', {
 							title: paragraphFields,
-							content: paragraphFields,
+							content: richTextFields
 						}
 					],
 				}

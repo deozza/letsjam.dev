@@ -4,6 +4,7 @@ import { grids } from './Grids';
 import { styles } from '../Configs/Styles';
 import { containerWidths } from '../Configs/ContainerWidths';
 import { alignements } from '../Configs/Alignements';
+import { richTexts } from '../Elements/RichTexts';
 
 export const cards = z.object({
   status: z.enum(['draft', 'published', 'archived']),
@@ -13,7 +14,7 @@ export const cards = z.object({
   alignement: alignements,
   width: containerWidths, 
   title: paragraphs.optional(),
-  content: paragraphs.optional(),
+  content: richTexts.optional(),
   footer: grids.optional()
 })
 

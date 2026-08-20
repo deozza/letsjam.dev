@@ -18,6 +18,10 @@
 	@reference "tailwindcss";
 	@reference "../../../../routes/layout.css";
 
+	.richTextComponent :global(p) {
+		@apply text-lg;
+	}
+
 	.richTextComponent :global(p:not(:last-child)){
     @apply my-6;
 	}

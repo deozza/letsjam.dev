@@ -3,6 +3,7 @@
 	import { sendContact } from './contact.remote';
 	import SEO from '$lib/SEO/index.svelte';
 	import Breadcrumbs from '$lib/ui/Breadcrumbs.svelte';
+	import Section from '$lib/ui/PageBuilder/Blocks/Section.svelte';
 
 	interface Props {
 		data: PageServerData;
@@ -10,14 +11,16 @@
 
 	let { data }: Props = $props();
 	let formState = $state<'idle'|'loading'|'success'|'error'>('idle');
-	
+
 </script>
 
 <SEO seo={data.seoProps} />
 
 <Breadcrumbs breadcrumbs={data.seoProps.breadcrumbs} />
 
-<h1 class="h1 font-black my-12">Parlez-moi de vos rêves</h1>
+{#each data.page.sections as section}
+	<Section {section} />
+{/each}
 
 <div class="flex flex-col-reverse md:flex-row flex-wrap items-start justify-between">
 	

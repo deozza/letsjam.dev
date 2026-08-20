@@ -10,6 +10,6 @@
 
 </script>
 
-<svelte:element this={element.importance} class={[element.importance, element.size]} id={getNormalizedString(element.content)} >
+<svelte:element this={element.importance} class={[element.importance, element.size, `text-${element.alignement}`, 'mb-6']} id={getNormalizedString(element.content)} >
   {element.content}
 </svelte:element>

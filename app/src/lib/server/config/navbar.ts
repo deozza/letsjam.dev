@@ -7,9 +7,9 @@ export const links: Array<{
   icon?: string | undefined,
   img?: string | undefined
 }> = [
+	{href: '/', content: 'Accueil', target: '_self', img: logo},
 	{href: '/services', content: 'Services', target: '_self', icon: 'mdi:list-box-outlined'},
 	// {href: '/projects', content: 'Réalisations', target: '_self', icon: 'mdi:about'},
-	{href: '/', content: 'Accueil', target: '_self', img: logo},
 	{href: '/about', content: 'À propos', target: '_self', icon: 'mdi:about-circle-outlined'},
 	{href: '/contact', content: 'Contact', target: '_self', icon: 'mdi:dmail-outlined'},
 ];

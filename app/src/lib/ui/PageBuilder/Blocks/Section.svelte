@@ -5,6 +5,9 @@
 	import RichText from "../Elements/RichText.svelte";
 	import Card from "./Card.svelte";
 	import Grid from "./Grid.svelte";
+	import Paragraph from "../Elements/Paragraph.svelte";
+	import List from "./List.svelte";
+	import Accordion from "./Accordion.svelte";
 
 	interface Props {
 		section: Sections;
@@ -15,8 +18,11 @@
 	const componentMapping: Map<string, SvelteComponent> = new Map([
 	  ['richTexts', RichText],
 	  ['headers', Header],
+	  ['paragraphs', Paragraph],
 	  ['cards', Card],
 	  ['grids', Grid],
+	  ['lists', List],
+	  ['accordions', Accordion]
 	]);
 
 

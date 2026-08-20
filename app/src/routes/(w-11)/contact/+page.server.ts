@@ -42,6 +42,6 @@ export const load: PageServerLoad = async ({fetch, url}) => {
 	return {
 		seoProps: contactPageSeo.getSeoProps(),
 		object: url.searchParams.get('object'),
-		page,
+		page
 	};
 };

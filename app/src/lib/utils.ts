@@ -17,6 +17,5 @@ export const getNormalizedString = (stringToNormalize: string): string => {
 
 export const selfAlignmentMapping: Map<string, string> = new Map([
 	['left', 'start'],
-	['center', 'center'],
 	['right', 'end']
 ])
