@@ -1,7 +1,6 @@
 import website from "$lib/server/config/website";
 import AbstractSeoForPage from "$lib/server/config/SEO/pages/AbstractSeoForPage";
 import type { Seo } from "$lib/server/config/SEO/types";
-
 export default class AboutPageSeo extends AbstractSeoForPage {
     public getSeoProps(): Seo {
     	const { author, entity, siteUrl, ogLanguage, siteTitle, siteLanguage, facebookPage, facebookAuthorPage, instagramPage, youtubeChannelId, description } = website;
@@ -17,7 +16,7 @@ export default class AboutPageSeo extends AbstractSeoForPage {
         ogLanguage,
         pageTitle: this.getTitle(),
         siteTitle,
-        url: `/about`,
+        url: this.page.uri,
         facebookPage,
         facebookAuthorPage,
         instagramPage,

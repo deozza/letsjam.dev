@@ -1,4 +1,4 @@
-import transporter from "./transporter"; 
+import transporter from "$lib/server/nodemailer/transporter"; 
 
 export const defaultEmailSender = async (from: string, to: string, subject: string, text: string, html: string, replyTo: string | undefined) => {
   const info = await transporter.sendMail({

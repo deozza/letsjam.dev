@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { Lists } from "$lib/server/modeles/PageBuilder/Blocks/Lists";
-	import Paragraph from "../Elements/Paragraph.svelte";
-	import RichText from "../Elements/RichText.svelte";
+	import Paragraph from "$lib/ui/PageBuilder/Elements/Paragraph.svelte";
+	import RichText from "$lib/ui/PageBuilder/Elements/RichText.svelte";
 
 	
 	interface Props {

@@ -1,6 +1,6 @@
-import { paragraphFields } from "../Elements/Paragraphs";
-import { richTextFields } from "../Elements/RichTexts";
-import { gridFields } from "./Grids";
+import { paragraphFields } from "$lib/server/repositories/PageBuilder/Elements/Paragraphs";
+import { richTextFields } from "$lib/server/repositories/PageBuilder/Elements/RichTexts";
+import { gridFields } from "$lib/server/repositories/PageBuilder/Blocks/Grids";
 
 export const cardFields = [
 	'*', {

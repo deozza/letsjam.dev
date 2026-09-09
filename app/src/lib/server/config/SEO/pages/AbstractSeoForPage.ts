@@ -10,7 +10,7 @@ export default abstract class AbstractSeoForPage {
     this.page = page;
   }
   
-  public abstract getSeoProps(): Seo;
+  public abstract getSeoProps(page: Pages): Seo;
   
   protected getFeaturedImage(link: string | null, title: string, alt: string): FeaturedImage {
     let rawImageLink: string = '';

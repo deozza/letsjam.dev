@@ -1,7 +1,7 @@
 import { form } from '$app/server';
 import * as z from "zod"; 
 import { defaultEmailSender } from '$lib/server/nodemailer/sender';
-import { PRIVATE_SMTP_USER } from '$env/static/private';
+import { env } from '$env/dynamic/private';
 import { contactMailObjectMapping } from '$lib/utils';
 
 export const sendContact = form(
@@ -38,12 +38,12 @@ const sendContactConfirmationEmail = async(firstname: string, lastname: string, 
   let textMessage: string = `Bonjour ${firstname} ${lastname}. Vous venez de prendre contact sur letsjam.dev pour ${contactMailObjectMapping.get(object)} et je vous en remercie. J'étudierais votre besoin avec attention et je reviendrais vers vous dans les 24h. À très bientôt !`;
   const subject: string = 'Confirmation de prise de contact';
 
-  return defaultEmailSender(PRIVATE_SMTP_USER, email, subject, textMessage, textMessage, undefined);
+  return defaultEmailSender(env.PRIVATE_SMTP_USER, email, subject, textMessage, textMessage, undefined);
 };
 
 const sendContactFormEmail = async(firstname: string, lastname: string, email: string, object: string, message: string) => {
   let textMessage: string = `${firstname} ${lastname} a pris contact pour ${object} : ${message}`;
 
-  return defaultEmailSender(PRIVATE_SMTP_USER, PRIVATE_SMTP_USER, object, textMessage, textMessage, email);
+  return defaultEmailSender(env.PRIVATE_SMTP_USER, env.PRIVATE_SMTP_USER, object, textMessage, textMessage, email);
   
 };

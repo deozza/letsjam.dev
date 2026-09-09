@@ -1,19 +1,19 @@
 import * as z from 'zod';
-import { alignements } from '../Configs/Alignements';
-import { textSizes } from '../Configs/TextSizes';
-import { fontWeights } from '../Configs/FontWeights';
-import { styles } from '../Configs/Styles';
-import { containerWidths } from '../Configs/ContainerWidths';
+import { textSizes } from '$lib/server/modeles/PageBuilder/Configs/TextSizes';
+import { fontWeights } from '$lib/server/modeles/PageBuilder/Configs/FontWeights';
+import { containerWidths } from '$lib/server/modeles/PageBuilder/Configs/ContainerWidths';
+import { colors } from '$lib/server/modeles/PageBuilder/Configs/Colors';
+import { alignments } from '$lib/server/modeles/PageBuilder/Configs/Alignments';
 
 export const paragraphs = z.object({
   status: z.enum(['draft', 'published', 'archived']),
   date_created: z.string(),
   date_updated: z.string(),
   content: z.string(),
-  alignement: alignements,
+  alignment: alignments,
   size: textSizes,
   fontWeight: fontWeights,
-  style: styles,
+  color: colors,
   width: containerWidths
 })
 

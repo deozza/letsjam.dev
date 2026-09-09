@@ -1,4 +1,4 @@
-import { sectionFields } from "./PageBuilder/Blocks/Sections";
+import { sectionFields } from "$lib/server/repositories/PageBuilder/Blocks/Sections";
 
 export const pageFields = [
 	'*', {

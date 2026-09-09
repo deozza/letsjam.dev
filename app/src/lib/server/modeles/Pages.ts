@@ -1,5 +1,5 @@
 import * as z from 'zod';
-import { sections } from './PageBuilder/Blocks/Sections';
+import { sections } from '$lib/server/modeles/PageBuilder/Blocks/Sections';
 
 export const pages = z.object({
   status: z.enum(['draft', 'published', 'archived']),

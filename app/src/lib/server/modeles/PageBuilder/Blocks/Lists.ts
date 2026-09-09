@@ -1,5 +1,5 @@
 import * as z from 'zod';
-import { steps } from './Steps';
+import { steps } from '$lib/server/modeles/PageBuilder/Blocks/Steps';
 
 export const lists = z.object({
   status: z.enum(['draft', 'published', 'archived']),

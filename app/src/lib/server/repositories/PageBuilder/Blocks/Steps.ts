@@ -1,5 +1,5 @@
-import { paragraphFields } from "../Elements/Paragraphs";
-import { richTextFields } from "../Elements/RichTexts";
+import { paragraphFields } from "$lib/server/repositories/PageBuilder/Elements/Paragraphs";
+import { richTextFields } from "$lib/server/repositories/PageBuilder/Elements/RichTexts";
 
 export const stepFields = [
 	'*', {

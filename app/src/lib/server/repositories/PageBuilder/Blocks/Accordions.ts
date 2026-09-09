@@ -1,4 +1,4 @@
-import { stepFields } from "./Steps";
+import { stepFields } from "$lib/server/repositories/PageBuilder/Blocks/Steps";
 
 export const accordionFields = [
 	'*', {

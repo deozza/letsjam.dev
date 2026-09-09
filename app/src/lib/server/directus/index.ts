@@ -10,14 +10,14 @@ import { buttons } from '$lib/server/modeles/PageBuilder/Elements/Buttons';
 import { richTexts } from '$lib/server/modeles/PageBuilder/Elements/RichTexts';
 import { cards } from '$lib/server/modeles/PageBuilder/Blocks/Cards';
 import { grids } from '$lib/server/modeles/PageBuilder/Blocks/Grids';
-import { alignements } from '$lib/server/modeles/PageBuilder/Configs/Alignements';
 import { fontWeights } from '$lib/server/modeles/PageBuilder/Configs/FontWeights';
-import { styles } from '$lib/server/modeles/PageBuilder/Configs/Styles';
-import { textImportances } from '$lib/server/modeles/PageBuilder/Configs/TextImportances';
 import { textSizes } from '$lib/server/modeles/PageBuilder/Configs/TextSizes';
-import { containerWidths } from '../modeles/PageBuilder/Configs/ContainerWidths';
-import { accordions } from '../modeles/PageBuilder/Blocks/Accordions';
-import { lists } from '../modeles/PageBuilder/Blocks/Lists';
+import { containerWidths } from '$lib/server/modeles/PageBuilder/Configs/ContainerWidths';
+import { accordions } from '$lib/server/modeles/PageBuilder/Blocks/Accordions';
+import { lists } from '$lib/server/modeles/PageBuilder/Blocks/Lists';
+import { colors } from '$lib/server/modeles/PageBuilder/Configs/Colors';
+import { alignments } from '$lib/server/modeles/PageBuilder/Configs/Alignments';
+import { headerImportances } from '$lib/server/modeles/PageBuilder/Configs/HeaderImportances';
 
 export const schema = z.object({
   pages: z.array(pages),
@@ -30,11 +30,11 @@ export const schema = z.object({
   richTexts: z.array(richTexts),
   cards: z.array(cards),
   grids: z.array(grids),
-  alignements: z.array(alignements),
+  alignments: z.array(alignments),
   containerWidths: z.array(containerWidths),
   fontWeights: z.array(fontWeights),
-  styles: z.array(styles),
-  textImportances: z.array(textImportances),
+  colors: z.array(colors),
+  headerImportances: z.array(headerImportances),
   textSizes: z.array(textSizes),
   accordions: z.array(accordions),
   lists: z.array(lists)

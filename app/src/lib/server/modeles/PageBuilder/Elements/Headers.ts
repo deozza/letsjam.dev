@@ -1,8 +1,8 @@
 import * as z from 'zod';
-import { textSizes } from '../Configs/TextSizes';
-import { textImportances } from '../Configs/TextImportances';
-import { alignements } from '../Configs/Alignements';
-import { styles } from '../Configs/Styles';
+import { textSizes } from '$lib/server/modeles/PageBuilder/Configs/TextSizes';
+import { colors } from '$lib/server/modeles/PageBuilder/Configs/Colors';
+import { alignments } from '$lib/server/modeles/PageBuilder/Configs/Alignments';
+import { headerImportances } from '$lib/server/modeles/PageBuilder/Configs/HeaderImportances';
 
 export const headers = z.object({
   status: z.enum(['draft', 'published', 'archived']),
@@ -10,9 +10,9 @@ export const headers = z.object({
   date_updated: z.string(),
   content: z.string(),
   size: textSizes,
-  importance: textImportances,
-  alignement: alignements,
-  style: styles
+  importance: headerImportances,
+  alignment: alignments,
+  color: colors
 })
 
 export type Headers = z.infer<typeof headers>;

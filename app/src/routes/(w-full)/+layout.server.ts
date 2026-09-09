@@ -1,4 +1,3 @@
-import { PUBLIC_ENVIRONMENT } from '$env/static/public';
 import { links } from '$lib/server/config/navbar';
 import type { LayoutServerLoad } from './$types';
 

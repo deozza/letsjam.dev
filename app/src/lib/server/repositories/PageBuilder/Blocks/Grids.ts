@@ -1,6 +1,6 @@
-import { buttonFields } from "../Elements/Buttons";
-import { paragraphFields } from "../Elements/Paragraphs";
-import { richTextFields } from "../Elements/RichTexts";
+import { buttonFields } from "$lib/server/repositories/PageBuilder/Elements/Buttons";
+import { paragraphFields } from "$lib/server/repositories/PageBuilder/Elements/Paragraphs";
+import { richTextFields } from "$lib/server/repositories/PageBuilder/Elements/RichTexts";
 
 export const gridFields = [
 	'*',{

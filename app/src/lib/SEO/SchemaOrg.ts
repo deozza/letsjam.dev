@@ -1,4 +1,4 @@
-import type { Breadcrumb, Seo } from './../server/SEO/types';
+import type { Breadcrumb, Seo } from '$lib/server/SEO/types';
 
 export const getSchemaOrgEntity = (seo: Seo, entityHash: string) => {
 	return seo.entityMeta !== null

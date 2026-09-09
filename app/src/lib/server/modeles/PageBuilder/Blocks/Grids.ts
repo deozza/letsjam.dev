@@ -1,7 +1,7 @@
 import * as z from 'zod';
-import { buttons } from '../Elements/Buttons';
-import { cards } from './Cards';
-import { alignements } from '../Configs/Alignements';
+import { buttons } from '$lib/server/modeles/PageBuilder/Elements/Buttons';
+import { cards } from '$lib/server/modeles/PageBuilder/Blocks/Cards';
+import { alignments } from '$lib/server/modeles/PageBuilder/Configs/Alignments';
 
 export const grids = z.object({
   status: z.enum(['draft', 'published', 'archived']),
@@ -10,7 +10,7 @@ export const grids = z.object({
   columns: z.number().min(1).optional(),
   rows: z.number().min(1).optional(),
   elements: z.array(z.union([buttons, cards])),
-  alignement: alignements
+  alignment: alignments
 })
 
 export type Grids = z.infer<typeof grids>;

@@ -9,7 +9,7 @@
 	let { element }: Props = $props();
 </script>
 
-<p class={[`text-${element.alignement}`, `self-${selfAlignmentMapping.get(element.alignement) || ''}`, element.size, `font-${element.fontWeight}`, `text-${element.style}`, element.width !== null ? `w-full md:w-${element.width}` : '']}>
+<p class={[`text-${element.alignment}`, `self-${selfAlignmentMapping.get(element.alignment) || ''}`, element.size, `font-${element.fontWeight}`, `text-${element.color}`, element.width !== null ? `w-full md:w-${element.width}` : '']}>
   {element.content}
 </p>
 

@@ -10,7 +10,6 @@ WORKDIR /app
 
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
-
 # Build the application with the Node.js adapter
 RUN npm run build
 

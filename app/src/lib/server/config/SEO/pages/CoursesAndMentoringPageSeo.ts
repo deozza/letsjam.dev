@@ -1,6 +1,6 @@
 import website from "$lib/server/config/website";
 import AbstractSeoForPage from "$lib/server/config/SEO/pages/AbstractSeoForPage";
-import type { Breadcrumb, Seo } from "$lib/server/config/SEO/types";
+import type { Seo } from "$lib/server/config/SEO/types";
 
 export default class CoursesAndMentoringPageSeo extends AbstractSeoForPage {
     public getSeoProps(): Seo {
@@ -17,7 +17,7 @@ export default class CoursesAndMentoringPageSeo extends AbstractSeoForPage {
         ogLanguage,
         pageTitle: this.getTitle(),
         siteTitle,
-        url: `/services/courses-and-mentoring`,
+        url: this.page.uri,
         facebookPage,
         facebookAuthorPage,
         instagramPage,

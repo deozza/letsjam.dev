@@ -3,8 +3,8 @@
 	import { slide } from 'svelte/transition';
 	import Icon from "@iconify/svelte";
 	import type { Accordions } from '$lib/server/modeles/PageBuilder/Blocks/Accordions';
-	import Paragraph from '../Elements/Paragraph.svelte';
-	import RichText from '../Elements/RichText.svelte';
+	import Paragraph from '$lib/ui/PageBuilder/Elements/Paragraph.svelte';
+	import RichText from '$lib/ui/PageBuilder/Elements/RichText.svelte';
 	
 	interface Props {
 		element: Accordions;

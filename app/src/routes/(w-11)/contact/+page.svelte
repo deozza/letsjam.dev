@@ -71,13 +71,13 @@
 					<select class="select field-xl text-slate-200" name="object">
 						<option disabled selected>Selectionner</option>
 						<optgroup label="Site vitrine">
-							<option value="website-audit" selected={data.object === 'website-audit'}>{contactMailObjectMapping.get('website-audit')}</option>
-							<option value="website-redevelop" selected={data.object === 'website-redevelop'}>{contactMailObjectMapping.get('website-redevelop')}</option>
-							<option value="website-from-scratch" selected={data.object === 'website-from-scratch'}>{contactMailObjectMapping.get('website-from-scratch')}</option>
+							<option value="website-audit">{contactMailObjectMapping.get('website-audit')}</option>
+							<option value="website-redevelop">{contactMailObjectMapping.get('website-redevelop')}</option>
+							<option value="website-from-scratch">{contactMailObjectMapping.get('website-from-scratch')}</option>
 						</optgroup>
 						<optgroup label="Cours et mentoring">
-							<option value="courses" selected={data.object === 'courses'}>{contactMailObjectMapping.get('courses')}</option>
-							<option value="mentoring" selected={data.object === 'mentoring'}>{contactMailObjectMapping.get('mentoring')}</option>
+							<option value="courses">{contactMailObjectMapping.get('courses')}</option>
+							<option value="mentoring">{contactMailObjectMapping.get('mentoring')}</option>
 						</optgroup>
 					</select>
 				</label>

@@ -1,3 +1,3 @@
-import { styleFields } from "../Configs/Styles";
+import { colorFields } from "$lib/server/repositories/PageBuilder/Configs/Colors";
 
-export const buttonFields = ['*', {style: styleFields, linkTo: ['uri']}]
+export const buttonFields = ['*', {color: colorFields, internalLinkTo: ['uri']}]

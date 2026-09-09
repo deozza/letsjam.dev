@@ -1,6 +1,6 @@
 import * as z from 'zod';
-import { paragraphs } from '../Elements/Paragraphs';
-import { richTexts } from '../Elements/RichTexts';
+import { paragraphs } from '$lib/server/modeles/PageBuilder/Elements/Paragraphs';
+import { richTexts } from '$lib/server/modeles/PageBuilder/Elements/RichTexts';
 
 export const steps = z.object({
   status: z.enum(['draft', 'published', 'archived']),

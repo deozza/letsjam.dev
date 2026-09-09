@@ -1,4 +1,4 @@
-import { PRIVATE_DIRECTUS_URL } from '$env/static/private';
+import { env } from '$env/dynamic/private';
 import ContactPageSeo from '$lib/server/config/SEO/pages/ContactPageSeo';
 import getDirectusInstance from '$lib/server/directus';
 import { readItems } from '@directus/sdk';
@@ -9,7 +9,7 @@ import { pageFields } from '$lib/server/repositories/Pages';
 
 export const load: PageServerLoad = async ({fetch, url}) => {
 
-	const directus = getDirectusInstance(fetch, PRIVATE_DIRECTUS_URL);
+	const directus = getDirectusInstance(fetch, env.PRIVATE_DIRECTUS_URL);
 	const page: Pages = await directus
 		.request(
 			readItems('pages', {
@@ -41,7 +41,6 @@ export const load: PageServerLoad = async ({fetch, url}) => {
 	
 	return {
 		seoProps: contactPageSeo.getSeoProps(),
-		object: url.searchParams.get('object'),
 		page
 	};
 };

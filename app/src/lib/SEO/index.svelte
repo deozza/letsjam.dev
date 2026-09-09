@@ -1,6 +1,6 @@
 <script lang="ts">
-	import OpenGraph from './OpenGraph.svelte';
-	import SchemaOrg from './SchemaOrg.svelte';
+	import OpenGraph from '$lib/SEO/OpenGraph.svelte';
+	import SchemaOrg from '$lib/SEO/SchemaOrg.svelte';
 	import { type Seo } from './types';
 
 	interface Props {
@@ -9,7 +9,7 @@
 
 	let { seo }: Props = $props();
 
-	const pageTitle = `${(() => seo.siteTitle)()} | ${(() => seo.pageTitle)()}`;
+	const pageTitle = `${(() => seo.pageTitle)()} — ${(() => seo.siteTitle)()}`;
 </script>
 
 <svelte:head>
