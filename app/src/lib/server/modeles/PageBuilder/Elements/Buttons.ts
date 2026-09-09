@@ -8,7 +8,8 @@ export const buttons= z.object({
   date_updated: z.string(),
   content: z.string(),
   style: styles,
-  linkTo: z.object(pages).optional() 
+  linkTo: z.object(pages).optional(),
+  externalLinkTo: z.url().optional() 
 })
 
 export type Buttons = z.infer<typeof buttons>;

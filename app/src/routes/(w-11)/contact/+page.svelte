@@ -4,6 +4,7 @@
 	import SEO from '$lib/SEO/index.svelte';
 	import Breadcrumbs from '$lib/ui/Breadcrumbs.svelte';
 	import Section from '$lib/ui/PageBuilder/Blocks/Section.svelte';
+	import { contactMailObjectMapping } from '$lib/utils';
 
 	interface Props {
 		data: PageServerData;
@@ -70,13 +71,13 @@
 					<select class="select field-xl text-slate-200" name="object">
 						<option disabled selected>Selectionner</option>
 						<optgroup label="Site vitrine">
-							<option value="website-audit" selected={data.object === 'website-audit'}>Un audit de votre site</option>
-							<option value="website-redevelop" selected={data.object === 'website-redevelop'}>La reprise de votre site</option>
-							<option value="website-from-scratch" selected={data.object === 'website-from-scratch'}>La création de votre site</option>
+							<option value="website-audit" selected={data.object === 'website-audit'}>{contactMailObjectMapping.get('website-audit')}</option>
+							<option value="website-redevelop" selected={data.object === 'website-redevelop'}>{contactMailObjectMapping.get('website-redevelop')}</option>
+							<option value="website-from-scratch" selected={data.object === 'website-from-scratch'}>{contactMailObjectMapping.get('website-from-scratch')}</option>
 						</optgroup>
 						<optgroup label="Cours et mentoring">
-							<option value="courses" selected={data.object === 'courses'}>Un cours</option>
-							<option value="mentoring" selected={data.object === 'mentoring'}>Du mentoring</option>
+							<option value="courses" selected={data.object === 'courses'}>{contactMailObjectMapping.get('courses')}</option>
+							<option value="mentoring" selected={data.object === 'mentoring'}>{contactMailObjectMapping.get('mentoring')}</option>
 						</optgroup>
 					</select>
 				</label>
@@ -97,7 +98,7 @@
 				{/if}
 			</footer>
 			{#if formState === 'success'}
-				<p class="p-4 bg-success-500 border-2">Votre message a été envoyé. J'y répondrais au plus vite</p>
+				<p class="p-4 bg-success-500 border-2">Votre message a été envoyé. Vous recevrez très bientôt un mail de confirmation.</p>
 			{:else if formState === 'error'}
 				<p class="p-4 bg-error-500 border-2">Une erreur est survenue, veuillez réessayer plus tard.</p>
 			{/if}

@@ -41,5 +41,6 @@ export const load: PageServerLoad = async ({ fetch, url }) => {
 	const projectsPageSeo: ProjectsPageSeo = new ProjectsPageSeo(page);
 	return {
 		seoProps: projectsPageSeo.getSeoProps(),
+		page
 	};
 };

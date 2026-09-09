@@ -1,19 +1,8 @@
-import { error, redirect } from '@sveltejs/kit';
-import { query, form } from '$app/server';
+import { form } from '$app/server';
 import * as z from "zod"; 
-import { Resend } from 'resend';
-import { PRIVATE_RESEND_API_KEY, PRIVATE_CONTACT_EMAIL } from '$env/static/private';
-import ContactPageSeo from '$lib/server/config/SEO/pages/ContactPageSeo';
-
-const resend = new Resend(PRIVATE_RESEND_API_KEY);
-
-export const getSeoProps= query(() => {
-	const contactPageSeo: ContactPageSeo = new ContactPageSeo();
-	return {
-		seoProps: contactPageSeo.getSeoProps(),
-	};
-});
-
+import { defaultEmailSender } from '$lib/server/nodemailer/sender';
+import { PRIVATE_SMTP_USER } from '$env/static/private';
+import { contactMailObjectMapping } from '$lib/utils';
 
 export const sendContact = form(
 	z.object({
@@ -28,38 +17,33 @@ export const sendContact = form(
 		if(send === true) {
 			return {success: true, data: {}};
 		}
-		return {success: true, data: 'pouet'}
-		// try {
-	 //    let { data, error } = await resend.emails.send({
-	 //      from: `${firstname} ${lastname} <${email}>`,
-	 //      to: [PRIVATE_CONTACT_EMAIL],
-	 //      subject: object,
-	 //      html: message,
-	 //    });
 
-	 //    if (error) {
-	 //    	return {
-	 //    		success: false,
-	 //    		error: error
-	 //    	}
-	 //    }
-	    
-	 //    { data, error } = await resend.emails.send({
-	 //      from: PRIVATE_CONTACT_EMAIL,
-	 //      to: [email],
-	 //      subject: 'Votre demande de contact a été prise en compte',
-	 //      html: '',
-	 //    });
-
-	 //    return {
-	 //    	success: true,
-	 //    	data: data
-	 //    };
-	 //  } catch (error) {
-  //   	return {
-  //   		success: false,
-  //   		error: error
-  //   	}
-	 //  }
+		const resultContactConfirmation = await sendContactConfirmationEmail(firstname, lastname, email, object, message);
+		if (resultContactConfirmation === undefined){
+			return{
+				sucess: false
+			};
+		}
+		
+		const resultContactForm = await sendContactFormEmail(firstname, lastname, email, object, message);
+		
+		return {
+			success: resultContactForm !== undefined
+		};
 	}
 );
+
+
+const sendContactConfirmationEmail = async(firstname: string, lastname: string, email: string, object: string, message: string) => {
+  let textMessage: string = `Bonjour ${firstname} ${lastname}. Vous venez de prendre contact sur letsjam.dev pour ${contactMailObjectMapping.get(object)} et je vous en remercie. J'étudierais votre besoin avec attention et je reviendrais vers vous dans les 24h. À très bientôt !`;
+  const subject: string = 'Confirmation de prise de contact';
+
+  return defaultEmailSender(PRIVATE_SMTP_USER, email, subject, textMessage, textMessage, undefined);
+};
+
+const sendContactFormEmail = async(firstname: string, lastname: string, email: string, object: string, message: string) => {
+  let textMessage: string = `${firstname} ${lastname} a pris contact pour ${object} : ${message}`;
+
+  return defaultEmailSender(PRIVATE_SMTP_USER, PRIVATE_SMTP_USER, object, textMessage, textMessage, email);
+  
+};

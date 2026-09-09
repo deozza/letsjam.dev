@@ -2,6 +2,7 @@
 	import type { PageServerData } from './$types';
 	import SEO from '$lib/SEO/index.svelte';
 	import Breadcrumbs from '$lib/ui/Breadcrumbs.svelte';
+	import Section from '$lib/ui/PageBuilder/Blocks/Section.svelte';
 
 	interface Props {
 		data: PageServerData;
@@ -15,4 +16,6 @@
 
 <Breadcrumbs breadcrumbs={data.seoProps.breadcrumbs} />
 
-<h1 class="h1 font-black my-12">Mes réalisations</h1>
+{#each data.page.sections as section}
+	<Section {section} />
+{/each}

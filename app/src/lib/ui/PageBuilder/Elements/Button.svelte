@@ -9,7 +9,11 @@
 
 </script>
 
-<a href={element.linkTo.uri} class={['btn-base', element.style.id]} id={element.id}>{element.content}</a>
+{#if element.linkTo !== undefined && element.linkTo !== null} 
+	<a href={element.linkTo.uri} class={['btn-base', element.style.id]} id={element.id}>{element.content}</a>
+{:else if element.externalLinkTo !== undefined && element.externalLinkTo !== null} 
+	<a href={element.externalLinkTo} target="_blank" class={['btn-base', element.style.id]} id={element.id}>{element.content}</a>
+{/if}
 
 <style lang='postcss' scoped>
 	@reference "tailwindcss";

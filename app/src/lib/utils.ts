@@ -19,3 +19,11 @@ export const selfAlignmentMapping: Map<string, string> = new Map([
 	['left', 'start'],
 	['right', 'end']
 ])
+
+export const contactMailObjectMapping: Map<string, string> = new Map([
+	['website-audit', 'un audit de votre site'],
+	['website-redevelop', 'la reprise de votre site'],
+	['website-from-scratch', 'la création de votre site'],
+	['courses', 'un cours'],
+	['mentoring', 'du mentoring'],
+])

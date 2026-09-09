@@ -20,7 +20,6 @@
 		{#each links as link}
 			<NavbarLink href={link.href} currentUri="" target={link.target} textSize="text-base">{link.content}</NavbarLink>
 		{/each}
-		<NavbarLink target="_self" href="/legals" currentUri="" textSize="text-base">Mentions légales</NavbarLink>
 		<div class="flex flex-row flex-wrap items-center justify-center space-x-2">
 			<NavbarLink target="_blank" href="https://www.linkedin.com/in/edenn-touitou-15ba17153/" currentUri=""><Icon icon="mdi:linkedin" class="size-elem-3xl" /></NavbarLink>
 			<NavbarLink target="_blank" href="https://www.github.com/deozza" currentUri=""><Icon icon="mdi:github" class="size-elem-3xl" /></NavbarLink>
