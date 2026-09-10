@@ -19,10 +19,7 @@ export default defineConfig({
 				},
 			},
 			adapter: adapter(),
-			extensions: ['.svelte'],
-			prerender: {
-				handleHttpError: 'warn'
-			}
+			extensions: ['.svelte']
 		})
 	]
 });
